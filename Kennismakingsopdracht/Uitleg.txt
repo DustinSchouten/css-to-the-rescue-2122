@@ -1,0 +1,26 @@
+Vroeger alleen mogelijk om tekst langs rasters, vlakken en rechte lijnen weer te geven.
+
+Met CSS-Shapes is het mogelijk om geometrische vormen te definieren waar teksten omheen kunnen vloeien. Denk aan cirkels en polygonen.
+
+Drie van de basisfuncties van CSS Shapes.
+circle()
+ellipse()
+polygon()
+
+De circle() functie is een functie waarbij we cirkels kunnen maken waar tekst omheen kan vloeien.
+
+border-radius 50% werkt niet omdat de tekst dan alsnog recht staat.
+
+gebruik hiervoor shape-outside: circle()
+Als je je element een background color wil meegeven dan werkt het niet. Het element blijkt een vierkant te zijn maar de tekst gaat er wel vloeiend omheen.
+
+om dit probleem op te lossen voeg je clip-path: circle() toe.
+
+je kan bij de shape-outside en bij de clip-path functie een extra parameter meegeven bij circle()
+
+Je kunt bijvoorbeeld clip-path: circle(25%) doen om de cirkel kleiner te maken. 50% geeft een cirkel op normale grootte weer. 100% geeft een vierkant weer en met een waarde hoger dan 50% kun je er een vierkant met afgeronde hoekjes maken waar de tekst omheen vloeit.
+
+Ook shape-outside: circle(parameter) laten zien. Gaat over positie van de tekst.
+
+De ellipse() functie heeft twee parameters, namelijk een X en een Y als radius.
+
