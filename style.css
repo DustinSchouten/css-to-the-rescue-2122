@@ -35,7 +35,7 @@ p {
 
   shape-outside: circle(50% at 50% 50%);
   clip-path: circle(50% at 50% 50%);
-
+  animation: showShape 1.5s forwards 0s;
 }
 
 .ellipse {
@@ -50,6 +50,7 @@ p {
 
   shape-outside: ellipse(closest-side farthest-side at 50% 50%);
   clip-path: ellipse(closest-side farthest-side at 50% 50%);
+  animation: showShape 1.5s forwards 0s;
 }
 
 .polygon {
@@ -61,4 +62,33 @@ p {
 
   shape-outside: polygon(50px 0, 200px 50px, 150px 200px, 0px 150px);
   clip-path: polygon(50px 0, 200px 50px, 150px 200px, 0px 150px);
+  animation: showShape 1.5s forwards 0s
+}
+
+.div {
+  margin-bottom: 100px;
+  animation: showDiv 1.5s forwards 0s;
+}
+
+@keyframes showShape {
+  0% {
+    opacity: 0;
+    transform: scale(0) rotate(-180deg);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+    transform: scale(1) rotate(360deg);
+  }
+}
+
+@keyframes showDiv {
+  0% {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
 }
