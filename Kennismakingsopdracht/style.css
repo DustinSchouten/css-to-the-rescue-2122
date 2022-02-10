@@ -30,32 +30,34 @@ p {
   height: 200px;
   /* border-radius: 50%; */
   float: left;
+  margin-right: 15px;
+
   shape-outside: circle(50% at 50% 50%);
   clip-path: circle(50% at 50% 50%);
 
-  margin-right: 15px;
 }
 
 .ellipse {
+  background: linear-gradient(to top right, #F17BB7, #AD84E3);
   width: 150px;
   height: 200px;
   float: left;
+  margin-right: 15px;
+
   shape-outside: ellipse(farthest-side closest-side at 50% 50%);
   clip-path: ellipse(farthest-side closest-side at 50% 50%);
 
   shape-outside: ellipse(closest-side farthest-side at 50% 50%);
   clip-path: ellipse(closest-side farthest-side at 50% 50%);
-
-  background: linear-gradient(to top right, #F17BB7, #AD84E3);
-  margin-right: 15px;
 }
 
 .polygon {
-  height: 200px;
+  background: linear-gradient(to top right, #86F7CC, #67D7F5);
   width: 200px;
+  height: 200px;
   float: left;
+  margin-right: 15px;
+
   shape-outside: polygon(50px 0, 200px 50px, 150px 200px, 0px 150px);
   clip-path: polygon(50px 0, 200px 50px, 150px 200px, 0px 150px);
-  background: linear-gradient(to top right, #86F7CC, #67D7F5);
-  margin-right: 15px;
 }
